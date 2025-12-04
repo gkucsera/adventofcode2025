@@ -45,9 +45,9 @@ Parallel.ForEach(input, line =>
                 continue;
 
             var currentText = numText[0..size];
-            var resultText = string.Join("", Enumerable.Range(0, numText.Length / size).Select(_ => currentText));
+            var resultText = long.Parse(string.Join("", Enumerable.Range(0, numText.Length / size).Select(_ => currentText)));
 
-            if (numText == resultText)
+            if (id == resultText)
             {
                 lock (lockObject)
                 {
